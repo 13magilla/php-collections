@@ -459,4 +459,24 @@ class Collection implements Countable, IteratorAggregate
             $this->validateItem($item);
         }
     }
+    
+    /**
+     * Gives a random number between 0  & 100
+     *
+     */
+    protected function random()
+    {
+        return rand(0, 100);
+    }
+    
+    /**
+     * Gives a random number for two set parameters
+     *
+     * @param integer $bottom to indicate lowest number in the set of random number
+     * @param integer $top to indicate top number in the set of random number
+     */
+    protected function random($bottom, $top)
+    {
+        return rand($bottom, $top);
+    }
 }
